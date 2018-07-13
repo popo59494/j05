@@ -6,7 +6,7 @@
 /*   By: apogorze <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/07/12 12:40:39 by apogorze          #+#    #+#             */
-/*   Updated: 2018/07/12 14:01:06 by apogorze         ###   ########.fr       */
+/*   Updated: 2018/07/13 23:58:27 by clement          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@ char	*ft_strupcase(char *str)
 {
 	while (*str)
 		{
-			*str = (*str - 32);
+			if (*str >= 'a' && *str <= 'z')
+				*str = (*str - 32);
 			str = str + 1;
 		}
 	return (str);
